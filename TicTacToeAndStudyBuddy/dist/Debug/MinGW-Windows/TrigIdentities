@@ -1,0 +1,18 @@
+What's the Pythagorean Identity involving sin and cos?
+cos^2(x) + sin^2(x) = 1
+What's the Pythagorean Identity involving tan and sec?
+1 + tan^2(x) = sec^2(x)
+What's the Pythagorean Identity involving cot and csc?
+cot^2(x) + 1 = csc^2(x)
+What's the Sum and Difference Formula involving sin(A+-B)?
+sin(A+-B) = sin(A)cos(B) +- cos(A)sin(B)
+What's the Sum and Difference Formula invovling cos(A+-B)?
+cos(A+-B) = cos(A)cos(B) -+ sin(A)sin(B)
+What's the Sum and Difference Formula involving tan(A+-B)?
+tan(A+-B) = (tan(A) +- tan(B))/(1 -+ tan(A)tan(B))
+What's the Double-Angle Formula involving sin(2A)?
+sin(2A) = 2sin(A)cos(A)
+What's the Double-Angle Formula involving cos(2A)?
+cos(2A) = cos^2(A) - sin^2(A) || 1 - 2sin^2(A) || 2cos^2(A) - 1
+What's the Double-Angle Formula involving tan(2A)?
+tan(2A) = 2tan(A)/(1 - tan^2(A))

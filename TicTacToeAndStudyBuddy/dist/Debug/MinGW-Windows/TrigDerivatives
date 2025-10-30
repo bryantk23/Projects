@@ -1,0 +1,22 @@
+Whats the derivative of sin(x)?
+cos(x)
+Whats the derivative of cos(x)?
+-sin(x)
+Whats the derivative of tan(x)?
+sec^2(x)
+Whats the derivative of csc(x)?
+-csc(x)cot(x)
+Whats the derivative of sec(x)?
+sec(x)tan(x)
+Whats the derivative of cot(x)?
+-csc^2(x)
+whats the derivative of sinh(x)?
+cosh(x)
+Whats the derivative of cosh(x)?
+sinh(x)
+Whats the derivative of tanh(x)?
+sech^2(x)
+What's another way to write sinh(x)?
+(e^x - e^-x)/2
+What's another way to write cosh(x)?
+(e^x + e^-x)/2

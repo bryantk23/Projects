@@ -1,0 +1,10 @@
+Bryant Kelly
+CSC-5-48891
+12/10/2023
+2999966
+
+Tic-Tac-Toe:
+The Tic-Tac-Toe game has 5 options within the entire application. The first four are player vs player, player vs perfect AI, player vs dumb AI, and dumb AI vs dumb AI. The final option is to allow the user to see the stats. I believe that this application achieves all goals; it has error checking for all game modes, gives the user the option to see their stats, and gives the user the option to save their game. I don't believe that there are any apparent errors, however I believe that there are some faults. Specifically, the output isn't very well optimized for the user when they select the dumb AI vs dumb AI. During this option, all of the moves/placements and advances in the game are outputted one after the other without much delay (almost instantaneous). Execpt for this fault, all programs within this game work.
+
+FlashCards:
+The FlashCard program has 5 options as well within the entire application. The first one is to add a set, then the second is to add to an existing set, third is to delete from an existing set, four is to study a set, and the final one is to delete a whole set. The core idea of this application is that these "study sets" are created by a single vector that stores and saves the desired questions and answers to a file. These files are then read in whenever they want to access or modify it. For example, if they want to delete from a specific set, the set is read into a vector and the desired question to be deleted is deleted, along with it's cooresponding answer. As for studying a set, the desired file to study is read into a vector. Then said vector's questions are outputted to the user, and tell the user whether or not they've entered the correct answer when they enter an answer. I believe that this application achieves all requirements. The entire program is also encoded with various error checking points. The only fault I would argue that there is, is that the program could be better optimized for user interactions.

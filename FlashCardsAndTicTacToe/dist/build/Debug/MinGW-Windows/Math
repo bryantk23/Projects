@@ -1,0 +1,18 @@
+Whats the derivative of sin(x)?
+cos(x)
+Whats the derivative of cos(x)?
+-sin(x)
+Whats the derivative of tan(x)?
+sec^2(x)
+Whats the derivative of csc(x)?
+-csc(x)cot(x)
+Whats the derivative of sec(x)?
+sec(x)tan(x)
+Whats the derivative of cot(x)?
+-csc^2(x)
+Whats the derivative of sin^-1(x)?
+1/(1-x^2)^1/2
+Whats the derivative of cos^-1(x)?
+-1/(1-x^2)^1/2
+Whats the derivative of tan^-1(x)?
+1/(1+x^2)

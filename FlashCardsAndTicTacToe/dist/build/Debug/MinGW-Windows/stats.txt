@@ -1,0 +1,12 @@
+Total Games Played: 6.
+Total Games Won: 3.
+Total Win Rate %: 50.
+
+Total Games Played vs Smart AI: 3.
+Total Games Won vs Smart AI: 0.
+Win Rate % vs Smart AI: 0.
+
+Total Games Played vs Dumb AI: 3.
+Total Games Won vs Dumb AI: 3.
+Win Rate % vs Dumb AI: 100.
+
