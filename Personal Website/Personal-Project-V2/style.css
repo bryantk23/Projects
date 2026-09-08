@@ -1,0 +1,1149 @@
+﻿
+html {
+    scroll-behavior: smooth;
+    height: 100%; 
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Set of pre-defined variable/values to be used later */
+:root {
+    --primary-font: 'Inter', sans-serif; 
+    --background-color: black;
+    --2nd-background-color: white;
+    --text-color: white;
+    --2nd-text-color: black;
+}
+
+/* Blurred background image container at top of webpage */
+.background-blur-container {
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+/* Blurred background image at top of webpage */
+.background-blur-img {
+    z-index: -100;
+    width: 100%;
+    height: 100vh;
+    filter: blur(5px);
+    transform-origin: center;
+    transform: scale(1.5);
+}
+
+/* Default settings for the webpage navagation bar unordered list*/
+.navbar ul {
+	list-style-type: none;
+	margin: 0;
+}
+
+/* Settings for the body of the whole webpage */
+body {
+    margin: 0;
+    padding: o;
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    font-family: var(--primary-font);
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* For screens larger than a phone, well larger than 1000px */
+@media (min-width: 1000px)
+{
+    /* The eye icon for additional info on image at top of webpage */
+    .toggle-fig-cap-icon {
+        display: none;
+    }
+
+    /* Caption for figure of the top image/figure at top of webpage */
+    .fig-cap {
+        position: absolute; top: 80%; left: 50%;
+        transform: translate(-50%, -80%);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        font-size: 1.5vw;
+        backdrop-filter: blur(8px);
+        border-radius: 8px;
+        z-index: 500;
+        opacity: 0;
+        transition: opacity 0.7s ease-in-out;
+    }
+
+    /* Header for figure of the top image/figure at top of webpage */
+    .fig-header{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0;
+        padding: 1px 1px;
+        font-size: 2.5vw;
+        position: absolute; top: 2%; left: 2%;
+        transform: translate(-2%, -2%);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        border: 0px;
+        border-radius: 10px;
+        opacity: 0;
+        transition: opacity 0.7s ease-in-out;
+    }
+
+    /* List of navbar hyperlinks for menu */
+    .navbar li {
+        width: fit-content;
+        border-bottom: 2px solid white;
+        padding: 5px 5px;
+    }
+
+    /* Navbar hover functionality */
+    .navbar a:hover {
+        transition: transform 0.3s ease-in-out;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    /* Navbar itself */
+    .navbar {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 10px 10px;
+        font-size: 20px;
+        position: fixed; 
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        mix-blend-mode: difference;
+        backdrop-filter: blur(3px);
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+    }
+
+    /* Navbar hyperlink attributes */
+    .navbar a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 10px 12px;
+        text-decoration: none;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    /* Top figure's image */
+    .fig-image {
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+        height: fit-content;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        z-index: 500;
+    }
+    
+    /* Container for all smaller images in gallery */
+    .all-images-container {
+        display: flex;
+        width: 100%;
+        height: fit-content;
+        z-index: 0;
+        padding-bottom: 10%;
+    }
+
+    /* Container for the smaller images themselves in the gallery, responsible for the column like structure you see. Previous class/div made be unnecessary */
+    .image-container{
+        column-count: 5;       /* Defines max columns */
+        column-width: 250px;   /* Breaks down responsively on smaller screens */
+        column-gap: 10px; 
+        height: fit-content;
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 10px;
+        margin: 0px;
+        z-index: 0;
+    }
+
+    /* Actual image in the individual smaller figures */
+    .rep-fig-image {
+        display: block;
+        width: 100%;
+        height: fit-content;
+        object-fit: cover;
+        opacity: 0.7;
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    /* Turns figcaption off for the images in gallery */
+    .image figcaption {
+        display: none;
+    }
+
+    /* Overall div of each figure in gallery, contains image, figcap, header */
+    .image {
+        width: 100%;
+        height: fit-content;
+        opacity: 0.7;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        flex-grow: 1;
+        margin-bottom: 10px;
+    }
+
+    /* Hover function for the smaller images in gallery */
+    .image:hover {
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        opacity: 1;
+        transform: scale(0.9);
+        cursor: pointer;
+    }
+
+    /* About Section */
+    /* About section for webpage */
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: var(--2nd-background-color);
+        z-index: 0;
+        color: var(--2nd-text-color);
+        font-family: "Open Sans", sans-serif;
+        gap: 1rem;
+        padding: 5%;
+    }
+
+    /* Container for text in about section */
+    #text-container {
+        display: inline;
+        width: 100%;
+        height: auto;
+       
+    }
+
+    /* Header for the about section */
+    .about-container header{
+        font-size: 3vw;
+        font-weight: bold;
+        color: #FFA500;
+        text-align: center;
+        width: fit-content;
+        padding-bottom: 3%;
+    }
+    
+    /* Container for about section description */
+    #text-container img{
+        width: 25%;
+        height: 25%;
+        float: left;
+        border-radius: 50%;
+        border: 2px solid black;
+        shape-outside: circle(50%);
+        margin: 10px; 
+    }
+
+    /* Text itself in the about section */
+    #text-container p{
+        padding-top: 5px;
+        font-size: 1.5vw;
+    }
+
+    /* Profile links in about section */
+    .profile-links {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: right;
+        gap: 3%;
+    }
+
+    /* Profile link logos */
+    .profile-links img{
+        width: 50%;
+        height: fit-content;
+    }
+
+    /* Profile link hyperlinks */
+    .profile-links a{
+        width: 10%;
+        height: fit-content;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    /* Profile link hyperlink hover functions, makes it move up and down when hovered on */
+    .profile-links a:hover{
+        transform: scale(1.2);
+    }
+
+    /* Skills Section */
+    /* Skills container for webpage */
+    .skills-container {
+        width: 100%;
+        height: fit-content;
+        background-color: #129DAE;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5% 0;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    /* Skills image */
+    .skills-container img{
+        width: 40%;
+        height: fit-content;
+    }
+
+    /* Header in Skills section */
+    .skills-container header{
+        font-size: 3vw;
+        color: black;
+        font-weight: bold;
+    }
+
+    /* Resume Section */
+    /* Resume container */
+    .resume-container {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        font-family: "Open Sans", sans-serif;
+        color: black;
+        gap: 80px;
+        padding: 5% 10%;
+        position: relative;
+    }
+
+    /* Header for resume section */
+    .resume-container header{
+        font-size: 3vw;
+        color: #FFA500;
+        font-weight: bold;
+    }
+    
+    /* Education logo of grad cap */
+    .education-pic {
+        display: flex;
+        width: 5%;
+        height: fit-content;
+    }
+
+    /* The whole div for education grid involving degree, education-pic, and institution */
+    .education-grid {
+        gap: 3%;
+        padding: 0;
+        display: inline-flex;
+        width: 100%;
+        height: fit-content;
+        justify-content: center;
+    }
+    
+    /* Parent div of degree info */
+    .degree {
+        margin: 0;
+        padding: 0;
+        width: 400px;
+        text-align: right;
+        height: fit-content;
+    }
+
+    /* Header for degree, says where you got your education at */
+    .degree header{
+        margin: 0;
+        padding: 0;
+        font-size: 1.5vw;
+        color: black;
+        font-weight: bold;
+    }
+
+    /* Paragraph giving info on the type of degree */
+    .degree p{
+        font-size: 1.5vw;
+        margin: 0;
+        padding: 0;
+        color: gray;
+    }
+
+    /* Parent div for institution */
+    .institution {
+        margin: 0;
+        padding: 0;
+        width: 60%;
+        height: fit-content;
+        text-align: left;
+    }
+
+    /* Header for institution, where you attend school */
+    .institution header{
+        margin: 0%;
+        padding: 0%; 
+        font-size: 1.5vw;
+        color: black;
+        font-weight: bold;
+    }
+
+    /* Paragraph giving info about where I attend school */
+    .institution p{
+        font-size: 1.5vw;
+        color: gray;
+    }
+
+    /* Stats Section */
+    /*Section for stats */
+    #stats {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        background-color: black;
+        gap: 5%;
+        font-family: "Open Sans", sans-serif;
+        padding: 5%;
+    }
+
+    /* General div of the icon in Stats section */
+    .icon-p-holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Describes the icon, like what it represents */
+    .icon-p-holder p{
+        padding: 0;
+        margin: 0;
+        width: 80px;
+    }
+
+    /* Actual stat of icon/achievement */
+    .icon-p-holder h{
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    /* Projects Section */
+    /* Overall section for personal projects */
+    #projects {
+        width: 100%;
+        height: fit-content;
+        background-image: url('images/projects-background-pic.jpg');
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Labels what the project is, title name */
+    #projects h{
+        padding: 5%;
+        color: white;
+        font-size: 3vw;
+        font-weight: bold;
+    }
+
+    /* Container for all project done */
+    .projects-container {
+        display: flex;
+        text-align: center;
+        align-items: left;
+        justify-content: center;
+        gap: 3rem;
+        width: 65%;
+        height: fit-content;
+        padding-bottom: 3rem;
+        margin: 0;
+    }
+
+    /* Hover effect of the individual project containers */
+    .short-project-container:hover{
+        mix-blend-mode: difference;
+        cursor: pointer;
+        transform: translateY(-10px);
+    }
+
+    /* Container of the individual projects done */
+    .short-project-container {
+        background-color: black;
+        font-size: 15px;
+        float: left;
+        display: inline;
+        width: 33%;
+        height: auto;
+        border: 2px solid white;
+        border-radius: 16px;
+        transition: transform 0.5s ease-in-out;
+        padding: 2%;
+    }
+    
+    /* Contact Section */
+    /* General settings for contact section */
+    #contact {
+        width: 100%;
+        height: fit-content;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Labels the section */
+    #contact h{
+        padding: 5%;
+        color: white;
+        font-size: 3vw;
+        font-weight: bold;
+    }
+
+    /* Div for the whole contact section */
+    #contact div{
+        padding: 5%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    /* Input fields of contact page */
+    #contact input {
+        width: 100%;
+        margin-left: 0%;
+        font-size: 20px;
+        padding: 16px 16px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        border-color: black;
+        font-family: "monospace", Courier New;
+    }
+
+    /* Contact text field effects when selected inside the field */
+    #contact input:focus-within {
+        outline: none;
+        border-color: #FFA500;
+        border-width: 3px;
+    }
+
+    /* Contact text area for the messsage, and effects when in text area*/
+    #contact textarea:focus-within {
+        outline: none;
+        border-color: #FFA500;
+        border-width: 3px;
+    }
+
+    /* Contact text area for the messsage */
+    #contact textarea{
+        font-family: "monospace", Courier New;
+        width: 100%;
+        margin-left: 0%;
+        font-size: 20px;
+        padding: 16px 16px;
+        border-radius: 10px;
+        border-width: 3px;
+        margin-bottom: 20px;
+        resize:none;
+        border-color: black;
+    }
+
+    /* Button to send message to ME! */
+    #contact button {
+        background-color: #FFA500;
+        border-radius: 20px;
+        border-color: black;
+        font-size: 22px;
+        text-align: center;
+        display: flex;
+        margin: auto;
+        padding: 16px 16px;
+    }
+
+    /* Hover effect for contact button */
+    #contact button:hover{
+        opacity: 80%;
+        cursor: pointer;
+    }
+
+    /* Home Section */
+    /* Figure at the top of the webpage */
+    .close-up-fig {
+        position: absolute; top: 10%; left: 0%;
+        overflow: hidden;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        max-height: 80vh;
+        min-height: 45%;
+        font-family: var(--primary-font);
+        transform: translate(50%, 5vh);
+        z-index: 500;
+        border: 2px solid white;
+        border-radius: 16px;
+        justify-content: center;
+    }
+
+    /* Makes header of fig at top of webpage fade in and out */
+    .close-up-fig:hover .fig-header{
+        opacity: 1;
+        transition: opacity 0.7s ease-in-out;
+    }
+
+    /* Makes caption of fig at top of webpage fade in and out */
+    .close-up-fig:hover .fig-cap{
+        opacity: 1;
+        transition: opacity 0.7s ease-in-out;
+    }
+   
+}
+
+
+/* for screen sizes less than a laptop */
+@media (max-width: 1000px){
+
+    /* Close up image at top of webpage */
+    .close-up-fig {
+        height: 80%;
+        width: 80%;
+        position: absolute; top: 0%;
+        transform: translate(12%, 10vh);
+        overflow: hidden;
+        margin-bottom: 2px;
+    }
+    
+    /* Ordered list of navbar hyperlinks */
+    .navbar li {
+        width: fit-content;
+        border-bottom: 2px solid white;
+        padding: 5px 5px;
+    }
+
+    /* Makes each hyperlink scale up by a factor of 1.1 whe hovered on */
+    .navbar a:hover {
+        transition: transform 0.3s ease-in-out;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    /* Navbar itself */
+    .navbar {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 8px 8px;
+        font-size: 2vw;
+        position: fixed; 
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: gray;
+    }
+
+    /* Navbar hyperlink styling */
+    .navbar a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 10px 12px;
+        text-decoration: none;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    /* Image at top of webpage */
+    .fig-image {
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+        height: auto;
+        width: 100%;
+        border: 2px solid white;
+        max-height: 90%;
+        z-index: 500;
+    }
+
+    /* Fig Caption Eye */
+    .toggle-fig-cap-icon {
+        z-index: 500;
+        display: flex;
+        margin-top: 3%;
+        margin-bottom: 5%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+        width: fit-content;
+    }
+
+    /* All the images container in the gallery */
+    .all-images-container {
+        display: flex; 
+        width: 100%;
+        height: auto;
+        z-index: 0;
+        padding-bottom: 10%;
+    }
+
+    /* Image container of each specific image in gallery */
+    .image-container{
+        column-count: 3;       /* Defines max columns */
+        column-width: 100px;   /* Breaks down responsively on smaller screens */
+        gap: 5px; 
+        height: fit-content;
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 10px;
+        margin: 0px;
+        z-index: 0;
+    }
+
+    /* Replacement figure in the image gallery at home page */
+    .rep-fig-image {
+        display: block;
+        width: 100%;
+        height: 30%;
+        object-fit: cover;
+        opacity: 0.7;
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    /* Figcaption of each fig in gallery */
+    .image figcaption {
+        display: none;
+    }
+
+    /* The image itself in the gallery */
+    .image {
+        width: 100%;
+        height: fit-content;
+        opacity: 0.7;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        flex-grow: 1;
+        margin-bottom: 5px;
+    }
+
+    /* Hover functions on the image itself */
+    .image:hover {
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        opacity: 1;
+        transform: scale(0.9);
+        cursor: pointer;
+    }    
+
+    /* ALL SUBSEQUENT CLASSES AND DIVS ARE COPIES OF WHATS IN THE SECTION FOR A LAPTOP SCREEN, I am not repeating the same comments again */
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: var(--2nd-background-color);
+        z-index: 0;
+        color: var(--2nd-text-color);
+        font-family: "Open Sans", sans-serif;
+        gap: 1rem;
+        padding: 5%;
+    }
+
+
+    #text-container {
+        display: inline;
+        width: 100%;
+        height: auto;
+    }
+
+    .about-container header{
+        font-size: 3vw;
+        font-weight: bold;
+        color: #FFA500;
+        text-align: center;
+        width: fit-content;
+        padding-bottom: 3%;
+    }
+    
+    #text-container img{
+        width: 25%;
+        height: auto;
+        float: left;
+        border-radius: 50%;
+        border: 2px solid #FFA500;
+        shape-outside: circle(50%);
+        margin: 1%; 
+    }
+
+    #text-container p{
+        padding-top: 5px;
+        font-size: 1.5vw;
+    }
+
+    .profile-links {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        text-align: center;
+        justify-content: right;
+        gap: 3%;
+    }
+
+    .profile-links img{
+        width: 50%;
+        height: auto;
+    }
+
+    .profile-links a{
+        width: 10%;
+        height: fit-content;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .profile-links a:hover{
+        
+        transform: scale(1.2);
+    }
+
+    /* Skills Section */
+    .skills-container {
+        width: 100%;
+        height: fit-content;
+        background-color: #129DAE;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5% 0;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .skills-container img{
+        width: 40%;
+        height: fit-content;
+        
+    }
+
+    .skills-container header{
+        font-size: 3vw;
+        color: black;
+        font-weight: bold;
+    }
+
+    /* Resume Section */
+    .resume-container {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        font-family: "Open Sans", sans-serif;
+        color: black;
+        gap: 4vh;
+        padding: 5% 10%;
+        position: relative;
+        margin: 0;
+    }
+
+    .resume-container header{
+        font-size: 3vw;
+        color: #FFA500;
+        font-weight: bold;
+    }
+    
+    .education-pic {
+        display: flex;
+        width: 5%;
+        height: 5%;
+    }
+
+    .education-grid {
+        gap: 3%;
+        padding: 0;
+        display: inline-flex;
+        width: 100%;
+        height: fit-content;
+    }
+    
+    .degree {
+        margin: 0;
+        padding: 0;
+        width: 20vw;
+        text-align: right;
+        height: fit-content;
+    }
+
+    .degree header{
+        margin: 0;
+        padding: 0;
+        font-size: 1.5vw;
+        color: black;
+        font-weight: bold;
+    }
+
+    .degree p{
+        font-size: 1.5vw;
+        margin: 0;
+        padding: 0;
+        color: gray;
+    }
+
+    .institution {
+        margin: 0;
+        padding: 0;
+        width: 60%;
+        height: fit-content;
+        text-align: left;
+    }
+
+    .institution header{
+        margin: 0%;
+        padding: 0%;
+        font-size: 1.5vw;
+        color: black;
+        font-weight: bold;
+    }
+
+    .institution p{
+        font-size: 1.5vw;
+        color: gray;
+    }
+
+    /* Stats Section */
+    #stats {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        background-color: black;
+        gap: 5%;
+        font-family: "Open Sans", sans-serif;
+        padding: 5%;
+    }
+
+    .icon-p-holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .icon-p-holder p{
+        padding: 0;
+        margin: 0;
+        width: fit-content;
+        font-size: 12px;
+    }
+
+    .icon-p-holder h{
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    /* Projects Section */
+    #projects {
+        width: 100%;
+        height: fit-content;
+        background-image: url('images/projects-background-pic.jpg');
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    #projects h{
+        padding: 5%;
+        color: white;
+        font-size: 3vw;
+        font-weight: bold;
+        
+    }
+    .projects-container {
+        display: flex;
+        text-align: center;
+        align-items: left;
+        justify-content: center;
+        gap: 10px;
+        width: 65%;
+        height: fit-content;
+        padding-bottom: 10px;
+        margin: 0;
+    }
+
+    .short-project-container:hover{
+        mix-blend-mode: difference;
+        cursor: pointer;
+        transform: translateY(-10px);
+    }
+
+    .short-project-container {
+        background-color: black;
+        font-size: 1.2vw;
+        float: left;
+        display: inline;
+        width: 33%;
+        height: fit-content;
+        border: 2px solid white;
+        border-radius: 16px;
+        transition: transform 0.5s ease-in-out;
+        padding: 2%;
+    }
+    
+    /* Contact Section */
+    #contact {
+        width: 100%;
+        height: fit-content;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact h{
+        padding: 5%;
+        color: white;
+        font-size: 3vw;
+        font-weight: bold;
+    }
+
+    #contact div{
+        padding: 5%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    #contact input {
+        width: 100%;
+        margin-left: 0%;
+        font-size: 20px;
+        padding: 16px 16px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        border-color: black;
+        font-family: "monospace", Courier New;
+    }
+
+    #contact input:focus-within {
+        outline: none;
+        border-color: #FFA500;
+        border-width: 3px;
+    }
+
+    #contact textarea:focus-within {
+        outline: none;
+        border-color: #FFA500;
+        border-width: 3px;
+    }
+
+    #contact textarea{
+        font-family: "monospace", Courier New;
+        width: 100%;
+        margin-left: 0%;
+        font-size: 20px;
+        padding: 16px 16px;
+        border-radius: 10px;
+        border-width: 3px;
+        margin-bottom: 20px;
+        resize:none;
+        border-color: black;
+    }
+
+    #contact button {
+        background-color: #FFA500;
+        border-radius: 20px;
+        border-color: black;
+        font-size: 22px;
+        text-align: center;
+        display: flex;
+        margin: auto;
+        padding: 16px 16px;
+    }
+
+    #contact button:hover{
+        opacity: 80%;
+        cursor: pointer;
+    }
+
+    /* Fig Info */
+    .fig-cap {
+        position: absolute; top: 150px; left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        font-size: 10px;
+        backdrop-filter: blur(8px);
+        border-radius: 8px;
+        z-index: 500;
+        transition: opacity 0.7s ease-in-out;
+    }
+
+    .fig-header{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0;
+        padding: 1px 1px;
+        font-size: 3vw;
+        position: absolute; top: 2%; left: 2%;
+        transform: translate(-2%, -2%);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        border: 0px;
+        border-radius: 10px;
+        transition: opacity 0.7s ease-in-out;
+    }
+}
+
+.hidden-header {
+    display: none;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 10;
+}
+
+.rep-fig-header {
+    text-align: center;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    font-size: 20px;
+    opacity: 0.7;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}

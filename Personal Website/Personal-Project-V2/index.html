@@ -1,0 +1,580 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Meta names and SEO -->
+    <meta charset="utf-8" />
+    <meta name="description" content="Bryant Kelly is a student at UCR's Bourne College of
+    Engineering 2026, pursing a B.S. in Computer Engineering. He has a vareity of experience in 
+    both the software and hardware aspects of engineering. In his free time he is an avid snowboard, 
+    reader, and cyclist. He is currently looking for summer internships and other part-time opportunities.">
+    <meta name="keywords" content="Bryant Kelly, UCR, University of Riverside Califorina, Computer Engineering, Computer Science"> <!-- Keywords relevant to your page -->
+    <meta name="distribution" content="Global"> <!-- Defines intended audience -->
+    <meta name="rating" content="general"> <!-- Level of maturity -->
+    <meta name="author" content="Bryant Kelly"> <!-- Name of writer -->
+    <meta name="robots" content="ALL"> <!-- Allows search engine bots to crawl or not -->
+    <title>Bryant Kelly's Personal Website</title>
+    <!-- CSS to HTML link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- images -->
+    <link ref="images" href="images">
+    <link ref-"projects-page" href="projects.HTML">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    
+
+    <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#stats">Stats</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <section id="home">
+        
+        <div class="background-blur-container">
+            <img src="images/pic0.jpg" class="background-blur-img">
+        </div>
+
+        <div class="close-up-pic-info">
+            <figure class="close-up-fig">
+                <header class="fig-header">Corona At Night</header>
+                <img class="fig-image" src="images/pic0.jpg">
+                <figcaption class="fig-cap" >This image was taken during one of 
+                my nightly hikes in the mountains near Anahiem. You can't tell 
+                in the photograph but this was during the winter, and there was 
+                acutal snow around me. One of the most difficult hikes I have 
+                ever done, probably because it was extremely cold and I was 
+                very underprepared.</figcaption>
+                <div class="toggle-fig-cap-icon" onclick="toggleCap()">
+                    <i class="fa-solid fa-eye-low-vision"></i>
+                </div>
+            </figure>
+        
+        </div>
+
+        
+    
+        <div class="all-images-container">
+
+            <div class="image-container">
+                <figure class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Mountain</header>
+                    <img class="rep-fig-image" src="images/pic1.jpg">
+                    <figcaption class="rep-fig-cap">This picture was taken during one 
+                    of my trips to Sedona, Arizona. This was either right after or before 
+                    we had finished hiking. I had even seen some people go parachuting 
+                    off a mountain, maybe this one (I'm not sure), but I'm pretty sure 
+                    they weren't allowed to.
+                    </figcaption>
+                </figure>
+                <figure class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Mountains</header>
+                    <img class="rep-fig-image" src="images/pic4.jpg">
+                    <figcaption class="rep-fig-cap">Is it a bird, a plane? No, it's me 
+                    in a helicopter taking an aerial shot of one of the mountains in Sedona. 
+                    Stunning image.</figcaption>
+                </figure>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Corona At Night</header>
+                    <img class="rep-fig-image" src="images/pic0.jpg">
+                    <figcaption class="rep-fig-cap">This image was taken during one of 
+                    my nightly hikes in the mountains near Anahiem. You can't tell 
+                    in the photograph but this was during the winter, and there was 
+                    acutal snow around me. One of the most difficult hikes I have 
+                    ever done, probably because it was extremely cold and I was 
+                    very underprepared.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Yosemite Waterfall</header>
+                    <img class="rep-fig-image" src="images/pic33.jpg">
+                    <figcaption class="rep-fig-cap">Beautiful far-away picture of a waterfall in Yosemite.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Whaley</header>
+                    <img class="rep-fig-image" src="images/pic2.jpg">
+                    <figcaption class="rep-fig-cap">Another picture taken during one of 
+                    my trips to Arizona. As you can see, this is a life-like whale 
+                    rock (A local treasure). He's name is Whaley and he wants to be an 
+                    astronaut when he grows up.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Queen Victoria</header>
+                    <img class="rep-fig-image" src="images/pic5.jpg">
+                    <figcaption class="rep-fig-cap">Picture of Queen Victoria. The statue 
+                    is not made of gold, and I totally knew that. I definitely did not think 
+                    it was made of gold when I was there, and not just search it up to find that 
+                    it was made of marble and bronze.
+                    </figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Buckingham Palace</header>
+                    <img class="rep-fig-image" src="images/pic6.jpg">
+                    <figcaption class="rep-fig-cap">A nice picture of Buckingham Palace from when 
+                    I went to England. Definitely not a part of reconnaissance mission to sneak into 
+                    the palace and steal the crown jewels, Muhahahaha.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Big Ben</header>
+                    <img class="rep-fig-image" src="images/pic7.jpg">
+                    <figcaption class="rep-fig-cap">This picture was captured outside of an old 
+                    telephone booth, not seen in the photo. It is a very big clock. I guess the 
+                    English really like keeping track of time.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Overview Of Yosemite</header>
+                    <img class="rep-fig-image" src="images/pic29.jpg">
+                    <figcaption class="rep-fig-cap">An overview picture I took just as we rounded the corner of a mountain.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">St. James's Park</header>
+                    <img class="rep-fig-image" src="images/pic8.jpg">
+                    <figcaption class="rep-fig-cap">Picture of a black goose I had seen while 
+                    walking around St. James's Park. This was my first time seeing one. Saw this 
+                    bird and a couple of other wildlife like squirrels.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Ferris Wheel</header>
+                    <img class="rep-fig-image" src="images/pic9.jpg">
+                    <figcaption class="rep-fig-cap">Taken when crossing one of the major bridges 
+                    in London. I can't even imagine the view from atop the Ferris Wheel. I hope 
+                    to go on a massive one sometime in the future.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Soho</header>
+                    <img class="rep-fig-image"src="images/pic10.jpg">
+                    <figcaption class="rep-fig-cap">Image was taken when I was wandering around London. 
+                    I think I stumbled into their China town, I didn't even know they had one. Actually 
+                    I don't even really remember taking this picture. Looks good though.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Mary Poppins</header>
+                    <img class="rep-fig-image" src="images/pic11.jpg">
+                    <figcaption class="rep-fig-cap">I have no idea if this is a mural of Mary Poppins but 
+                    thats what this reminded me of. I don't know about you but I highly doubt that bambi from the Disney movie 
+                    made this art. I mean it's possible, considering how she is an intelligent animal capable of dialogue. But 
+                    I don't remember her having opposable thumbs. Also, I DO NOT RECOMMEND what the text in red tells you. 
+                    If you missed or don't see the text in red ignore the previous sentence.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Redwoods</header>
+                    <img class="rep-fig-image" src="images/pic31.jpg">
+                    <figcaption class="rep-fig-cap">Picture of some Redwoods I had seen during a trip to Yosemite. They are 
+                    really tall, no I mean REALLY tall trees. According to Google's AI, the average Redwood is around 1,333 
+                    ice cream scoops tall. Now you might ask why would I put the units in ice cream scoops, and it's rather simple. 
+                    Because I can.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Ruins</header>
+                    <img class="rep-fig-image" src="images/pic12.jpg">
+                    <figcaption class="rep-fig-cap">Picture I took while in London exploring a park area. They appear to be 
+                    ruins of some kind. Have no idea what they could have been used for, but the texture of the brick floor 
+                    kind of reminds of Temple Run. You ever play that game? I never did but had a friend who did.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Rock Bridge</header>
+                    <img class="rep-fig-image" src="images/pic13.jpg">
+                    <figcaption class="rep-fig-cap">Get this . . . A bridge made (drum roll please) of ROCK! Actually it was pretty 
+                    cool when I saw this thing. And it might not be rock, or at least doesn't look like it. Might be some kind of 
+                    unknown fosilized substance.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Cave Opening</header>
+                    <img class="rep-fig-image" src="images/pic14.jpg">
+                    <figcaption class="rep-fig-cap">Image was captured when I entered a cave in London. Thought I was 
+                    going to get attacked by mummies or skeletons, thankfully I escaped. Now looking back on the image 
+                    I do wonder what is on the other side of that body of water.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Buried Treasure</header>
+                    <img class="rep-fig-image" src="images/pic15.jpg">
+                    <figcaption class="rep-fig-cap">Ok I may have mislead you with the title of this image. This was taken in the same 
+                    cave as the other cave related pictures I was really hoping to find some gold here, or in the very least rubies and diamonds. 
+                    It was rather disappointing.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Lavender</header>
+                    <img class="rep-fig-image" src="images/pic16.jpg">
+                    <figcaption class="rep-fig-cap">This is a lavender field I had visited. It was actually really scary for me. There were a ton 
+                    of bumble bees around, like more than I had ever seen in my life. I don't know if they sting but they looked like they could 
+                    pack a punch. I spent the whole time running around the field trying to stay away from them. We were there for like 
+                    3 hours.
+                    </figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Stone Hedge</header>
+                    <img class="rep-fig-image" src="images/pic17.jpg">
+                    <figcaption class="rep-fig-cap">Far-away picture of Stone Hedge. I was extremely luckly and blessed by family 
+                    members to have a chance to go here. One of the best trips I had ever been on in my life.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Stone Hedge</header>
+                    <img class="rep-fig-image" src="images/pic18.jpg">
+                    <figcaption class="rep-fig-cap">Another picture of Stone Hedge. It was colder and a lot windier than you might think. I brought 
+                    a jacket and I was still cold. Actually, I remember shivering most of the time I was there, even though I brought a jacket. Well 
+                    worth the cold temperatures.
+                    </figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">LA</header>
+                    <img class="rep-fig-image" src="images/pic19.jpg">
+                    <figcaption class="rep-fig-cap">Nice picture of LA from Dodger Stadium (BOO, go Angels!)</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Stream</header>
+                    <img class="rep-fig-image" src="images/pic20.jpg">
+                    <figcaption class="rep-fig-cap">Picture of a stream I had seen while on one of my hikes</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Cave Entrance</header>
+                    <img class="rep-fig-image" src="images/pic21.jpg">
+                    <figcaption class="rep-fig-cap">Well, we got another cave. This was taken on a hike I took up in Central California. 
+                    Looks like something out of Plato's allegory of the cave.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Cave Path</header>
+                    <img class="rep-fig-image" src="images/pic22.jpg">
+                    <figcaption class="rep-fig-cap">Stunning image I captured while exploring Plato's cave (if you know, you know). It was a truly 
+                    beautiful experience for me. I just loved the cool and relaxing atmosphere while exploring this undergound cavern. I guess that's the 
+                    caveman side of me.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Pond</header>
+                    <img class="rep-fig-image" src="images/pic23.jpg">
+                    <figcaption class="rep-fig-cap">Picture was captured in the same location as the previous cave photos. It was very tempting to 
+                    take a dip in the lake but I was fairly certain the other hikers would not appreciate that.
+                    </figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Corn Maze</header>
+                    <img class="rep-fig-image" src="images/pic24.jpg">
+                    <figcaption class="rep-fig-cap">Image of a gaint corn maze I had done. They gave everyone a map before they entered because this 
+                    maze was enormous. Since I didn't want this to be too easy for me, I put the map in my backpack and tried for about 2 hours without it. 
+                    I got absolutely no where, and with it getting dark I brought out the map and my flashlight. I frantically wandered around til I found my way out. 
+                    It was a fun experience though, would definitely do again.
+                    </figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Bikepacking</header>
+                    <img class="rep-fig-image" src="images/pic25.jpg">
+                    <figcaption class="rep-fig-cap">Image I took of the first time I went bikepacking. If you do not know what bikepacking is, think of camping 
+                    and biking in one. It was a unique experience, I'll leave it at that.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Newport Beach</header>
+                    <img class="rep-fig-image" src="images/pic26.jpg">
+                    <figcaption class="rep-fig-cap">Beautiful picture of Newport beach in California during one of the times I had biked down to the beach. 
+                    </figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Big Bear</header>
+                    <img class="rep-fig-image" src="images/pic27.jpg">
+                    <figcaption class="rep-fig-cap">Absolutely magnificent picture taken while I was snowboarding in Big Bear. Truly breathtaking.</figcaption>
+                </div>
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Waterfall</header>
+                    <img class="rep-fig-image" src="images/pic28.jpg">
+                    <figcaption class="rep-fig-cap">Cool waterfall pic.</figcaption>
+                </div>
+            
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">El Capitan</header>
+                    <img class="rep-fig-image" src="images/pic30.jpg">
+                    <figcaption class="rep-fig-cap">Picture of the notorious El Capitan in Yosemite. Have no idea how people mountain-climb that monster.</figcaption>
+                </div>
+            
+                <div class="image" onclick="changeImg(this)">
+                    <header class="rep-fig-header">Redwoods</header>
+                    <img class="rep-fig-image" src="images/pic32.jpg">
+                    <figcaption class="rep-fig-cap">Some more Redwoods.</figcaption>
+                </div>
+            
+            </div>
+
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="about-container">
+            <header>About</header>
+            
+            <div id="text-container">
+                <img src="images/profile-pic.jpg">
+                <p>Hello viewer, and welcome. I'm Bryant Kelly and this is my personal website. Made from stratch in the USA with my sweat, 
+                tears, and love. I am a student at UCR pursuing my B.A. in Computer Engineering. I transfered to UCR after completing my 
+                general education at RCC, Riverside's City College. My adacemic interests involve web development, 3D modeling/printing, app 
+                development, and much more. More than anything, I love a challenge. I am also very physically active, as I have to stay in fit 
+                condition for my snowboarding adventures. If you can't tell, I am a snowboarding addict. I also love traveling, and the home 
+                section you see near the top of this webpage are filled pictures I've taken of some places I have been lucky to visit. P.S: If you hover (with a mouse)
+                over the enlargened picture at the very top it gives you some info about where it was taken. Click on the eye icon if on phone.</p>
+        
+            </div>
+            
+            <div class="profile-links">
+                <a href="https://www.linkedin.com/in/bryant-k-739859217/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/linkedin-pic.png" alt="LinkedIn Profile">
+                </a>
+                <a href="https://profile.indeed.com/?hl=en_US&co=US&from=gnav-passport--passport-webapp" target="_blank" rel="noopener noreferrer">
+                    <img src="images/indeed-pic.png" alt="Indeed Profile">
+                </a>
+                <a href="https://github.com/bryantk23" target="_blank" rel="noopener noreferrer">
+                    <img src="images/github-pic.png" alt="GitHub Profile">
+                </a>
+                <a href="images/Current%20Resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <img src="images/CV-pic.png" alt="Resume PDF">
+                </a>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="skills">
+        <div class="skills-container">
+            <header>Skills</header>
+            <img src="images/skills-pic.png" alt="Skills PNG">
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="resume-container">
+            <header>Education</header>
+            <div class="education-grid">
+                <div class="degree">
+                    <header>Bachelor's Degree</header>
+                    <p>September 2026 - May 2028</p>
+                </div>
+                <img class="education-pic" src="images/education-pic.png">
+                <div class="institution">
+                    <header>University of California, Riverside</header>
+                    <p>Majoring at UCR in Computer Engineering. Recipient of 
+                    the Regent's Scholarship</p>
+                </div>
+            </div>
+            <div class="education-grid">
+                <div class="degree">
+                    <header>Associate's Degree</header>
+                    <p>September 2023 - May 2026</p>
+                </div>
+                <img class="education-pic" src="images/education-pic.png">
+                <div class="institution">
+                    <header>Riverside City College</header>
+                    <p>Completed my general education here, and got an Associate's 
+                    Degree for Transfer (ADT) in Computer Sicence. During my time here 
+                    I made the Dean's List, created various projects, and developed the 
+                    foundation of my computer science skills</p>
+                </div>
+            </div>
+
+            <div class="education-grid">
+                <div class="degree">
+                    <header>Highschool Diploma</header>
+                    <p>August 2019 - June 2023</p>
+                    
+                </div>
+                <img class="education-pic" src="images/education-pic.png">
+                <div class="institution">
+                    <header>Centennial High School</header>
+                    <p>Participated in the IB program, through which I completed 
+                    about 100 hours of community service, held various presentations 
+                    ranging from physics to spanish, and recipient of Digital Literacy certificate. 
+                    In addition I took a variety of AP classes, was on the school's 
+                    baseball team for some time, and made it to regionals in the science 
+                    fair during my senior year</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats">
+        <div class="icon-p-holder">
+            <i class="fa-solid fa-file" style="color: white; font-size: 6vw;"></i>
+            <h>6</h>
+            <p>Projects Completed</p>
+        </div>
+        <div class="icon-p-holder">
+            <i class="fa-solid fa-screwdriver-wrench" style="color: white; font-size: 6vw;"></i>
+            <h>2</h>
+            <p>Projects In Progress</p>
+        </div>
+        <div class="icon-p-holder">
+            <i class="fa-regular fa-lightbulb" style="color: white; font-size: 6vw;"></i>
+            <h><i class="fa-solid fa-infinity"></i></h>
+            <p>Crazy Ideas</p>
+        </div>
+        <div class="icon-p-holder">
+            <i class="fa-solid fa-award" style="color: white; font-size: 6vw;"></i>
+            <h>5</h>
+            <p>Awards Received</p>
+        </div>
+        <div class="icon-p-holder">
+            <i class="fa-solid fa-laptop-code" style="color: white; font-size: 6vw;"></i>
+            <h>7</h>
+            <p>Courses Taken</p>
+        </div>
+        <div class="icon-p-holder">
+            <i class="fa-solid fa-hourglass-half" style="color: white; font-size: 6vw;"></i>
+            <h>100+</h>
+            <p>Hours Coding</p>
+        </div>
+        
+    </section>
+    <section id="projects">
+        <h>Projects</h>
+        <div class="projects-container">
+            
+            <div class="short-project-container">
+                <a href="https://github.com/bryantk23/Projects/tree/main/Chess-ish" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: white;">
+                    <div class="icon-p-holder" style="padding: 10% 0%; height: fit-content;">
+                        <i class="fa-solid fa-chess" style="color: white; font-size: 3vw; align-items: left;"></i>
+                        <p style="font-weight: bold; padding: 5% 0%;">Chess-ish</p>
+                    </div>
+                    <p1>Created a version of Chess that lets you develop and practice various 
+                    gambits or strategies. It's more of a training application than an acutal 
+                    chess game.</p1>
+                </a>
+            </div>
+            
+            <div class="short-project-container">
+                <a href="https://github.com/bryantk23/Projects/tree/main/CasinoGames" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: white;">
+                    <div class="icon-p-holder" style="padding: 10% 0%; height: fit-content;">
+                        <i class="fa-solid fa-dice" style="color: white; font-size: 3vw; align-items: left;"></i>
+                        <p style="font-weight: bold; padding: 5% 0%; width: 100%;">BlackJack and Slots</p>
+                    </div>
+                    <p1>Created a virtual casino that lets you gamble your life savings away! 
+                    Specifically, I made BlackJack and Slots. You start off with 100 chips, try 
+                    not to lose them.</p1>
+                </a>
+            </div>
+
+            <div class="short-project-container">
+                <a href="https://github.com/bryantk23/Projects/tree/main/TicTacToeAndStudyBuddy" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: white;">
+                    <div class="icon-p-holder" style="padding: 10% 0%; height: fit-content;">
+                        <i class="fa-solid fa-book-open" style="color: white; font-size: 3vw; align-items: left;"></i>
+                        <p style="font-weight: bold; padding: 5% 0%;">StudyBuddy</p>
+                    </div>
+                    <p1>Created digital flashcards that you can use to cram for your next exam! 
+                    You are able to create a set of flashcards to review and test yourself with. 
+                    There is also an example set.</p1>
+                </a>
+            </div>
+        </div>
+
+        <!-- longer project container -->
+        <div class="projects-container">
+            <div class="short-project-container" style="width: 50%;">
+                <div class="icon-p-holder" style="padding: 3% 0%; height: fit-content;">
+                    <i class="fa-regular fa-window-maximize" style="color: white; font-size: 3vw; align-items: left;"></i>
+                    <p style="font-weight: bold; padding: 5% 0%; width: fit-content;">Personal Website</p>
+                </div>
+                <p1>Made my own personal website from scratch using HMTL, CSS, and JavaScript without 
+                the use of any premade templates or AI models. The process was arduous but enlightening, 
+                as I didn't know much HTML or CSS before this project. This project was definitely more 
+                frontend heavy than backend.</p1>
+            </div>
+
+            <div class="short-project-container" style="width: 50%;">
+                <a href="https://github.com/bryantk23/Projects/tree/main/Ionic%20Thruster" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: white;">
+                    <div class="icon-p-holder" style="padding: 3% 0%; height: fit-content;">
+                        <i class="fa-solid fa-shuttle-space" style="color: white; font-size: 3vw; align-items: left;"></i>
+                        <p style="font-weight: bold; padding: 5% 0%; width: fit-content">Ionic Thruster</p>
+                    </div>
+                    <p1>Created a working model ionic thruster, a type of engine that's used in deep-space travel. 
+                    I model and printed the core structure on my 3D printer, solder the electrical components, and 
+                    preformed various measurements on the ion thruster under varying distances between the cathode 
+                    and anode.</p1>
+                </a>
+            </div>
+        </div>
+        
+        <div class="projects-container">
+            <div class="short-project-container" style="width: 50%;">
+                <a href="https://github.com/bryantk23/Projects/tree/main/DIY%20PC" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: white;">
+                    <div class="icon-p-holder" style="padding: 3% 0%; height: fit-content;">
+                        <i class="fa-solid fa-computer" style="color: white; font-size: 3vw; align-items: left;"></i>
+                        <p style="font-weight: bold; padding: 5% 0%;">DIY PC</p>
+                    </div>
+                    <p1>Built my own PC from a variety of parts under a very strict budget of $200. The market value 
+                    of it at that time was roughly around $500. After a month or two of extensive research I was able 
+                    to find high quality PC components at a reduced price. The PC is still completely operational and 
+                    still contains most of the hardware from my original build.</p1>
+                </a>
+            </div>
+
+            <div class="short-project-container" style="width: 50%;">
+                <div class="icon-p-holder" style="padding: 3% 0%; height: fit-content;">
+                    <i class="fa-solid fa-earth-americas" style="color: white; font-size: 3vw; align-items: left;"></i>
+                    <p style="font-weight: bold; padding: 5% 0%; width: fit-content">GeoTracker - In Progress</p>
+                </div>
+                <p1>Created an Android app that notifies you when you have reached your desired location. The user 
+                inputs where they're going, and once they get within a certain radius of the destination they are 
+                notified by a sound. This app is designed for people who want to nap worry-free about missing their
+                stop while using transportation, like a bus.</p1>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h>Contact</h>
+        <p>Shoot me a message and I'll get back you to</p>
+        <div>
+            <form action="https://formspree.io/f/xbgrzvbl" method="POST">
+                <input type="text" name="fullName" placeholder="Full Name" autocomplete="off" required>
+                <input type="text" name="email" placeholder="Email" autocomplete="off" required>
+                <textarea rows="5" cols="60" name="message" placeholder="Message" autocomplete="off" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
+
+<style>
+
+
+
+
+</style>
+<script>
+function changeImg(element) {
+    window.scrollTo(0,0, "smooth");
+    document.querySelector('.fig-image').src = element.querySelector('.rep-fig-image').src;
+    document.querySelector('.fig-cap').textContent = element.querySelector('.rep-fig-cap').textContent;
+    document.querySelector('.fig-header').textContent = element.querySelector('.rep-fig-header').textContent;
+
+    document.querySelector('.background-blur-img').src = element.querySelector('.rep-fig-image').src;//replaces background blurred image with image in close-up-fig
+ 
+}
+function handlesPageUpdate() {
+    
+    globalThis.scrollTo(0, 'smooth', 50);
+
+}
+//const toggleDisplay = 
+function toggleCap() {
+    
+    if (document.querySelector('.fig-cap').style.display == 'none')
+    {
+        document.querySelector('.fig-cap').style.display = 'flex';
+        document.querySelector('.fig-header').style.display = 'flex';
+    }
+    else
+    {
+        document.querySelector('.fig-cap').style.display = 'none';
+        document.querySelector('.fig-header').style.display = 'none';
+    }
+}
+
+</script>
+
